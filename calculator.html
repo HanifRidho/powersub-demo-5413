@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Kalkulator Javascript</title>
+
+        <style>
+            .container {
+                width: 500px;
+                height: 500px;
+                background-color: yellow;
+                margin: auto;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: center;
+            }
+
+            .input {
+                background-color: orange;
+                margin-left: 50px;
+                margin-right: 50px;
+                padding: 2px;
+                border-radius: 10px;
+            }
+
+            .tombol {
+                background-color: gold;
+                padding: 10px;
+            }
+
+        </style>
+        <script>
+          function tambah(){
+          var bilangan1=document.getElementById("bil1").value;
+          var bilangan2=document.getElementById("bil2").value;
+          var angka1=Number(bilangan1);
+          var angka2=Number(bilangan2);
+
+          var hasil=angka1+angka2;
+
+          document.getElementById("hasiltext").innerHTML=hasil;
+
+        }
+
+          function kurang(){
+          var bilangan1=document.getElementById("bil1").value;
+          var bilangan2=document.getElementById("bil2").value;
+          var angka1=Number(bilangan1);
+          var angka2=Number(bilangan2);
+
+          var hasil=angka1-angka2;
+
+          document.getElementById("hasiltext").innerHTML=hasil;
+
+        }
+
+          function kali(){
+          var bilangan1=document.getElementById("bil1").value;
+          var bilangan2=document.getElementById("bil2").value;
+          var angka1=Number(bilangan1);
+          var angka2=Number(bilangan2);
+
+          var hasil=angka1*angka2;
+
+          document.getElementById("hasiltext").innerHTML=hasil;
+
+        }
+
+        function bagi(){
+          var bilangan1=document.getElementById("bil1").value;
+          var bilangan2=document.getElementById("bil2").value;
+          var angka1=Number(bilangan1);
+          var angka2=Number(bilangan2);
+
+          var hasil=angka1/angka2;
+
+          document.getElementById("hasiltext").innerHTML=hasil;
+
+        }
+
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Kalkulator Javascript</h1>
+            
+                <div class="input">
+                    <input type="text" id="bil1">
+                </div><br>
+                <div class="input">
+                    <input type="text" id="bil2">
+                </div><br>
+                <div class="tombol">
+                    <input type="button" onclick="tambah()" value="Tambah">
+                    <input type="button" onclick="kurang()" value="Kurang">
+                    <input type="button" onclick="kali()" value="Kali">
+                    <input type="button" onclick="bagi()" value="bagi">
+                </div><br>
+                <h1 id="hasiltext"></h1>
+                </div>
+        </div>
+    </body>
+</html>
